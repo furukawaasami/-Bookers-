@@ -1,6 +1,6 @@
 <h1>編集画面</h1>
 
-<%= form_with model:@book,url:update_book_path(@book.id),method:patch,local:true do |if| %>
+<%= form_with model: @book,url: update_book_path(@book.id),method: :patch,local:true do |f| %>
 
 <h4>Title</h4>
  <%= f.text_field :title %>
@@ -14,5 +14,5 @@
  <% end %>
 
  <span>
-  <%= link_to "show", book_path(book.id) %>
+  <%= link_to "show", book_path(@book.id) %>
 </span>
